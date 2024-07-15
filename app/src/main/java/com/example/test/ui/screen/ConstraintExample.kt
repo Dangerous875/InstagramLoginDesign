@@ -15,13 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 
 
-@Preview(
-    name = "test",
-    showBackground = true,
-    showSystemUi = true,
-    apiLevel = 34,
-    device = Devices.PIXEL_3A
-)
+
 @Composable
 fun ConstraintExample() {
     ConstraintLayout(modifier = Modifier.fillMaxSize()) {
@@ -95,5 +89,34 @@ fun ConstraintExample() {
             Text(text = "Example")
         }
 
+    }
+}
+
+@Preview(
+    name = "test",
+    showBackground = true,
+    showSystemUi = true,
+    apiLevel = 34,
+    device = Devices.PIXEL_3A
+)
+@Composable
+fun ConstraintLayoutGuide(){
+    ConstraintLayout(modifier = Modifier.fillMaxSize()) {
+        val topGuide = createGuidelineFromTop(0.1f)
+        val startGuide = createGuidelineFromStart(0.1f)
+        val boxRed = createRef()
+
+        Box(
+            modifier = Modifier
+                .size(125.dp)
+                .background(color = Color.Red)
+                .constrainAs(boxRed) {
+                    top.linkTo(topGuide)
+                    start.linkTo(startGuide)
+                },
+            contentAlignment = Alignment.Center
+        ) {
+            Text(text = "Example")
+        }
     }
 }
