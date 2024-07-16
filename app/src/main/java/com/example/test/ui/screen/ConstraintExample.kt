@@ -15,7 +15,6 @@ import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 
 
-
 @Composable
 fun ConstraintExample() {
     ConstraintLayout(modifier = Modifier.fillMaxSize()) {
