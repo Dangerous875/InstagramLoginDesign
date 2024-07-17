@@ -43,10 +43,10 @@ fun LoginScreen() {
     ConstraintLayout(
         modifier = Modifier
             .fillMaxSize()
-            .padding(horizontal = 4.dp)
+            .padding(horizontal = 8.dp)
             .background(Color.White)
     ) {
-        val actionBarTop = createGuidelineFromTop(0.04f)
+        val actionBarTop = createGuidelineFromTop(0.02f)
         val iconClose = createRef()
         val imageInstagram = createRef()
         val emailUser = createRef()
