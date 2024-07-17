@@ -9,6 +9,7 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.test.ui.screen.ComponentsCompose
 import com.example.test.ui.screen.ConstraintExample
+import com.example.test.ui.screen.login.InstagramLogin
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +17,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
 //            TestPreview()
-            ComponentsCompose()
+//            ComponentsCompose()
+            InstagramLogin()
         }
     }
 }
