@@ -27,7 +27,7 @@ fun ConstraintLayoutScope.InputPassword(
                 top.linkTo(idEmailUser.bottom)
             }
             .fillMaxWidth()
-            .padding(horizontal = 16.dp),
+            .padding(horizontal = 16.dp, vertical = 12.dp),
         value = query,
         onValueChange = { onChangePassword(it) },
         label = { Text(text = "Password", fontWeight = FontWeight.Light) },

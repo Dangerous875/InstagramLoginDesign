@@ -13,7 +13,8 @@ import com.example.test.R
 @Composable
 fun ConstraintLayoutScope.ImageInstagram(
     imageInstagram: ConstrainedLayoutReference,
-    iconClose: ConstrainedLayoutReference
+    iconClose: ConstrainedLayoutReference,
+    idEmailUser: ConstrainedLayoutReference
 ) {
     Image(
         modifier = Modifier.Companion
@@ -21,9 +22,9 @@ fun ConstraintLayoutScope.ImageInstagram(
                 top.linkTo(iconClose.bottom)
                 start.linkTo(parent.start)
                 end.linkTo(parent.end)
-                bottom.linkTo(parent.bottom)
+                bottom.linkTo(idEmailUser.top)
             }
-            .size(250.dp),
+            .size(180.dp),
         painter = painterResource(id = R.drawable.iv_insta),
         contentDescription = null
     )
