@@ -96,6 +96,7 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.common)
 
-    //contraintLayout
+    //constraintLayout
     implementation(libs.constraintlayout.compose)
+
 }
